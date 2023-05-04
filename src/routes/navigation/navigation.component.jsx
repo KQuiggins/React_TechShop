@@ -1,15 +1,27 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { Fragment } from 'react';
+
+import SvgComponent from '../../components/logo/logo.component';
+import './navigation.styles.scss'
 
 
 const Navigation = () => {
     return (
       <Fragment>
-        <div>
-          <h1>Navigation Bar</h1>
+        <div className="navigation">
+          <Link className="logo-container" to='/'>
+            <SvgComponent className="logo" />
+          </Link>
+          
+          <div className="nav-links-container">
+            <Link to="/shop" className="nav-link">
+                SHOP
+            </Link>
+          </div>
         </div>
         <Outlet />
       </Fragment>
+     
       )
   };
 

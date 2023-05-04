@@ -4,11 +4,10 @@ import Navigation from "./routes/navigation/navigation.component";
 import './index.scss';
 
 
-
-
 const Shop = () => {
   return (
     <h1>I am the shop page</h1>
+    
   )
 };
 

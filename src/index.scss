@@ -1,8 +1,19 @@
 body{
-    font-family: fussion, sans-serif;
-    padding: 20px 60px;
     
-    @media screen and (max-width: 800px) {
-        padding: 10px;
-    }
+    margin: 0;
+    
+    font-family: fussion, sans-serif;
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+    
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+*{
+    box-sizing: border-box;
+}
+
