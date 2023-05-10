@@ -36,14 +36,15 @@ const firebaseConfig = {
 // eslint-disable-next-line no-unused-vars
 const firebaseApp = initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
 
-provider.setCustomParameters({ 
+googleProvider.setCustomParameters({ 
   prompt: 'select_account' 
 });
 
 export const auth = getAuth();
-export const signInWithGoogle = () => signInWithPopup(auth, provider);
+export const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
+export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
 
@@ -76,3 +77,5 @@ export const createUserDocumentFromAuth = async (userAuth) => {
   return userDocRef;
 
 };
+
+export const createAuthUserWithEmailAndPassword = async (email, password) => {};
