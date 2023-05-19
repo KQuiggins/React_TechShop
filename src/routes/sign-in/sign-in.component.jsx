@@ -1,5 +1,6 @@
 import SignupForm from '../../components/sign-up-form/sign-up-form.component';
 
+
 import { 
   
   signInWithGoogle, 
@@ -20,8 +21,8 @@ const SignIn = () => {
   
   return (
     <>
-      <div>SignIn Page</div>
-      <button onClick={logGoogleUser}>
+      <div style={{"margin": "10px"}}>Sign-In Page</div>
+      <button onClick={logGoogleUser} style={{"marginLeft": "10px"}}>
         SignIn with Google
       </button>
       <SignupForm />
