@@ -29,7 +29,9 @@ const SignInForm = () => {
 	};
 
 	const googleSignIn = async () => {
+		
 		const { user } = await signInWithGoogle();
+		//setCurrentUser(user);
 		await createUserDocumentFromAuth(user);
 	};
 
@@ -49,7 +51,7 @@ const SignInForm = () => {
 				email, 
 				password
 			);
-			setCurrentUser(user);
+			// setCurrentUser(user);
 			
 			resetFormFields();
 		} catch (error) {
