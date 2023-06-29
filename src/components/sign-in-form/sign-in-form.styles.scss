@@ -1,4 +1,4 @@
-.sign-up-container {
+.sign-in-container {
 	display: flex;
 	flex-direction: column;
 	width: 380px;
@@ -11,7 +11,10 @@
 		display: flex;
         justify-content: space-between;
 	}
+
 	button {
-		margin-bottom: 5px;
+		margin: 10px;
+		
 	}
+	
 }
