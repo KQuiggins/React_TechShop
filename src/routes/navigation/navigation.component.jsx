@@ -1,7 +1,8 @@
 import { Outlet, Link } from 'react-router-dom';
 import { Fragment, useContext } from 'react';
-import CartIcon from './../../components/cart-icon/cart-icon.components.jsx';
+import  CartIcon  from './../../components/cart-icon/cart-icon.components.jsx';
 import { UserContext } from '../../context/user.context';
+import { CartContext } from '../../context/cart.context';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 import SvgComponent from '../../components/logo/logo.component';
 import './navigation.styles.scss'
@@ -12,6 +13,7 @@ import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component
 const Navigation = () => {
 
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
   
   
 
@@ -37,7 +39,7 @@ const Navigation = () => {
             <CartIcon />
             
           </div>
-          <CartDropdown />
+          { isCartOpen && <CartDropdown />}
         </div>
         <Outlet />
       </Fragment>
